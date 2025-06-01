@@ -1,0 +1,16 @@
+llama2-7b:
+  hf_key: "NousResearch/Llama-2-7b-chat-hf"
+  question_start_tag: "[INST] "
+  question_end_tag: " [/INST]"
+  answer_tag: ""
+  flash_attention2: "true"
+  gradient_checkpointing: "true"
+llama3-8b:
+  hf_key: "deepseek-ai/DeepSeek-R1-Distill-Llama-8B"
+  question_start_tag: "<｜User｜>"
+  question_end_tag: "<｜Assistant｜>"
+  think_start_tag: "<think>\n"
+  think_end_tag: "\n</think>\n\n"
+  answer_tag: ""
+  flash_attention2: "true"
+  gradient_checkpointing: "true"
