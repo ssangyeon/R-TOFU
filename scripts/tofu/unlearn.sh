@@ -31,7 +31,7 @@ learning_rates=(
 )
 
 export TASK_LIST=$(IFS=,; echo "${task_list[*]}")
-model_path=deepseek-ai/DeepSeek-R1-Distill-Llama-8B # enter the path to the fine-tuned(target) model.
+model_path=sangyon/LRM-target
 mask=true
 
 use_LoRA=false
