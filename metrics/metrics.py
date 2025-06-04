@@ -299,7 +299,10 @@ def get_eval_results(eval_result_dict):
 def run_generation(cfg, batch, model, tokenizer):
     input_ids = batch["input_ids"]
 
-    input_strings = tokenizer.batch_decode(input_ids, skip_special_token=False)
+    # The transformers API expects `skip_special_tokens`.
+    # Using the incorrect `skip_special_token` triggers a
+    # `TypeError` because the argument is unrecognized.
+    input_strings = tokenizer.batch_decode(input_ids, skip_special_tokens=False)
     split_symbol = "<think>\n"
 
 
